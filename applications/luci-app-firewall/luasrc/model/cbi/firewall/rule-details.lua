@@ -93,6 +93,7 @@ elseif rule_type == "redirect" then
 
 	o = s:option(Value, "src", translate("Source zone"))
 	o.nocreate = true
+	o.allownone = true
 	o.default = "wan"
 	o.template = "cbi/firewall_zonelist"
 
@@ -122,6 +123,7 @@ elseif rule_type == "redirect" then
 
 	o = s:option(Value, "dest", translate("Destination zone"))
 	o.nocreate = true
+	o.allownone = false
 	o.default = "lan"
 	o.template = "cbi/firewall_zonelist"
 
@@ -267,6 +269,7 @@ else
 	o = s:option(Value, "src", translate("Source zone"))
 	o.nocreate = true
 	o.allowany = true
+	o.allownone = true
 	o.default = "wan"
 	o.template = "cbi/firewall_zonelist"
 
@@ -301,6 +304,7 @@ else
 	o.nocreate = true
 	o.allowany = true
 	o.allowlocal = true
+	o.allownone = false
 	o.template = "cbi/firewall_zonelist"
 
 
